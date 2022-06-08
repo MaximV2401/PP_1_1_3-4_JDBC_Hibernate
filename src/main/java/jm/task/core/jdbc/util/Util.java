@@ -18,16 +18,8 @@ public class Util {
             connection = DriverManager.getConnection (URL, LOGIN, PASSWORD);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (connection != null) {
-                    connection.close();
-                }
-
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
         }
+
         return connection;
 
     }
